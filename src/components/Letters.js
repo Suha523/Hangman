@@ -8,13 +8,13 @@ export class Letters extends Component {
     return (
       <div>
         <div>Available Letters</div>
-        {letters.map((l) =>
+        {letters.map((l, key) =>
           letterStatus[l] ? (
-            <span key={l} className="crossed-out">
+            <span key={key} className="crossed-out">
               <Letter letter={l} updateScore={this.props.updateScore} selectLetter={this.props.selectLetter} />
             </span>
           ) : (
-            <Letter key={l} letter={l} updateScore={this.props.updateScore} selectLetter={this.props.selectLetter} />
+            <Letter key={key} letter={l} updateScore={this.props.updateScore} selectLetter={this.props.selectLetter} />
           )
         )}
       </div>

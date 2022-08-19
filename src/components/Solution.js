@@ -8,8 +8,8 @@ Solution extends Component {
     let letterStatus = this.props.letterStatus;
     return (
       <div>
-        {letters.map((l) =>
-          letterStatus[l] ? <Letter key={l} letter={l} /> : <span key={l + "_"}>_ </span>
+        {letters.map((l, key) =>
+          letterStatus[l] ? <Letter key={key} letter={l} /> : <span key={l + "_"}>_ </span>
         )}
         <div>
           <em>{this.props.solution.hint}</em>
