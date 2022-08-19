@@ -1,7 +1,8 @@
 import { Component } from "react";
 import { Letter } from "./Letter";
 
-export class Solution extends Component {
+export class 
+Solution extends Component {
   render() {
     let letters = this.props.solution.word.split("");
     let letterStatus = this.props.letterStatus;
