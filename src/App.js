@@ -100,7 +100,8 @@ class App extends Component {
         <button onClick={this.resetState}>Return</button>
       </div>
     ) : (
-      <div>
+      <div className="playground-field">
+        <h1 className="header">Hangman Game</h1>
         <Score score={this.state.score} />
         <Solution
           letterStatus={this.state.letterStatus}

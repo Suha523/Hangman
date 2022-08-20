@@ -1,11 +1,14 @@
 .high-score{
     color: green;
+    margin-bottom: 20px;
 }
 
 .medium-score{
     color: orange;
+    margin-bottom: 20px;
 }
 
 .low-score{
     color: red;
+    margin-bottom: 20px;
 }

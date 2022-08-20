@@ -6,17 +6,33 @@ export class Letters extends Component {
     let letterStatus = this.props.letterStatus;
     let letters = Object.keys(letterStatus);
     return (
-      <div>
+      <div className="letters-field">
         <div>Available Letters</div>
+        <div>
         {letters.map((l, key) =>
           letterStatus[l] ? (
-            <span key={key} className="crossed-out">
-              <Letter letter={l} updateScore={this.props.updateScore} selectLetter={this.props.selectLetter} />
+            <span key={key} className="crossed-out letter">
+              <Letter
+                letter={l}
+                updateScore={this.props.updateScore}
+                selectLetter={this.props.selectLetter}
+              />
             </span>
           ) : (
-            <Letter key={key} letter={l} updateScore={this.props.updateScore} selectLetter={this.props.selectLetter} />
+            <span key={key} className="letter">
+                <Letter 
+                
+                letter={l}
+                updateScore={this.props.updateScore}
+                selectLetter={this.props.selectLetter}
+              />
+            </span>
+              
+            
           )
         )}
+        </div>
+      
       </div>
     );
   }
